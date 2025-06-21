@@ -1,10 +1,10 @@
 import React from "react";
 import { assets } from "../assets/assets";
-import { ArrowRight, CalendarIcon, ClockIcon } from "lucide-react";
+import { ArrowRight, CalendarIcon, ClockIcon, CloudSnow } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className='flex flex-col items-start justify-center gap-4 px-6 md:px-16 lg:px-36 bg-[url("/backgroundImage.png")] bg-cover bg-center h-screen'>
       <img
@@ -32,8 +32,12 @@ const HeroSection = () => {
         other to survive, two people meet in London and try to stop a
         conspiracy.
       </p>
-      <button onClick={()=> navigate("/movies") }>Explore Movies</button>
-      <ArrowRight className="w-5 h-5"/>
+      <button
+        onClick={() => navigate("/movies")}
+        className="flex items-center gap-1 px-6 py-3 text-s bg-primary hover:bg-primary-dull transition rounded-full font-medium cursor-pointer"
+      >
+        Explore Movies <ArrowRight className="w-5 h-5 " />
+      </button>
     </div>
   );
 };
